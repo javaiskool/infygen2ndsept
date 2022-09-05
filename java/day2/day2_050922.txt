@@ -1,0 +1,154 @@
+seletion
+to alter the normal sequence of execution
+it is condition based.
+condition checking constructs
+**if
+if (condition/s)
+{
+	true block;
+}
+
+when the speified condition/s evalates to true, then the statements written in the true bloack are executed.
+if the condition/s evaluates to false, then if else part is present the statements in alse part are executed.
+else part is optional.
+when one if block follows another if block it is multiple condition checking.
+when one if block is within another if block then nested condition checking takes place.
+if  {} will not be written, then only one statement is coonsidered under the block
+
+**if else
+if (condition/s)
+{
+	true block;
+}
+else
+{
+	false block;
+}
+
+
+** if     else if
+
+if(condition/s)
+{
+
+
+}
+else if (condition/s)
+{
+
+
+}
+else
+{
+
+
+}
+** multiple if
+if (condition/s)
+{
+
+
+}
+if (condition/s)
+{
+
+
+}
+
+
+** nested if
+
+if (condition/s)
+{
+
+	if (condition/s)
+	{
+		
+	}
+	else
+	{
+	
+	}
+}
+else
+{
+
+	if (condition/s)
+	{
+		
+	}
+	else
+	{
+	
+	}
+}
+
+** switch case
+
+switch (exp/var)
+{
+	case val1:statments;
+	---	
+	---
+	break;
+	case val2:statements;
+	----
+	---
+	break;
+	default :statements;
+	---
+	---
+}
+
+when the answer to a question has multiple answers from which the option is to be selected then switch case can be used
+when the condition does not evaluate in true/false then switch case can be used.
+switch case can be used with char,string and integral data types oly.
+the case value that matches the var/exp will be executed till either break statement is encountered or end of switch case.
+default is optional. if none of the case matches and default is written, then statements under deault part will get executed.
+default can be written anywhere in the switch , it is a good practice to write it as last part of the switch.
+
+**3rd concept iteration
+execution of same set of statements at same place repeatedly.
+looping construts
+for , while, do while 
+the loop iterations depends upon the looping condition
+
+2 types => when no. of times the statements to be repeated is known use for loop
+when how many times to repeate set of statements is not known use while loop, do while
+do while loop executes once and then checks the condition that determines whether to continue execution of the loop or not.
+while loop is called entry controlled loop as it checks the condition then then if the condition is satisfied it starts the iteration.
+
+for loops are used when no. of times to repeat the statments is known
+for(initial value;looping condition,increment/decrement)
+{
+
+}
+ 
+
+while loop
+while(condition/s)
+{
+
+	statement should be provided for termination of the loop
+
+
+
+}
+
+do while loop
+do
+{
+
+statement which make the condition false after finite iterations
+
+
+}while(condition);
+
+break statement => when inside a loop break statement is encountered, then the loop execution will terminate and program execution continues after loop.
+continue statement => when inside a loop continue statement is encountered,then statements after continue in the loop block are skipped and the execution starts with new iteration of the loop.
+
+nested loops => a type of loop can be nested with any type of loop
+for loops are closely associated with arrays and nested for loops with multi-dimensional arrays.
+
+
+
