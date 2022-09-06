@@ -1,0 +1,144 @@
+for(int i=1;i<3;i++)
+{
+	System.out.println("Hello ");
+}
+
+dry run
+
+i	o/p
+1	Hello
+2	Hello
+3
+
+ 
+	for(j=1;j<=4;j++)
+	System.out.print("Welcome ");
+
+j	o/p
+1	Welcome Welcome Welcome Welcome
+2
+3
+4
+5
+
+
+	for(j=1;j<=4;j++)
+	System.out.print("Welcome ");
+	for(j=1;j<=4;j++)
+	System.out.print("Welcome ");
+
+	for(i=1;i<=3;i++)
+	{
+		for(j=i;j<=4;j++)
+		{
+			System.out.print("Welcome "); 
+		}
+		System.out.println("\n");
+	}
+
+i	j	o/p
+1	1	Welcome Welcome Welcome Welcome
+	2
+	3
+	4
+	5
+2	2	Welcome Welcome Welcome
+	3
+	4
+	5
+3	3	Welcome Welcome
+	4
+	5
+4
+
+	for(i=1;i<=3;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			System.out.print("Welcome "); 
+		}
+		System.out.println("\n");
+	}
+
+i	j	o/p
+1	1	Welcome
+	2
+2	1	Welcome Welcome
+	2
+	3
+3	1	Welcome Welcome Welcome
+	2
+	3
+	4
+4
+
+
+	for(i=1,j=100;i<4;i=i+2,j=j+10)
+		System.out.println(i+" "+j);
+
+
+i	j 	o/p
+1	100	1 100
+3	110	3 110
+5	120
+
+
+
+
+i	j	o/p
+1	1	Welcome Welcome Welcome Welcome
+	2
+	3
+	4
+	5
+2	2	Welcome Welcome Welcome
+	3
+	4
+	5
+3	3	Welcome Welcome
+	4
+	5
+4
+
+1
+1 2 3
+1 2 3 4 5
+
+1
+4 9
+16 25 36
+
+		1
+	1	2	1
+1	2	3	2	1
+	1	2	1
+		1
+
+*******
+******
+*****
+****
+***
+**
+*
+**
+***
+****
+*****
+******
+*******
+
+1/2+1/3+1/4+.... +1/10
+
+1/2+2/3+3/4
+1/3+2/4+
+
+i=1;
+do
+{
+	System.out.println("Java");
+	i=i+1;
+}while(i<=1);
+
+
+

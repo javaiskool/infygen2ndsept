@@ -1,0 +1,146 @@
+Object Oriented Programming
+a programming approach where more importance is given to data than processing
+data=> place of storage, access , relationship with other data itmes
+=> manage the functionality easily
+
+basic principle of OOPs => reusability
+
+real life entity (any thing that has properties/attributes and behavior/functionality
+employee, student
+book, item
+bank-account, club-membership
+distance, measurement units, date
+
+using OOP concepts we can map real life entity into prorgamming construct
+
+entity=>employee 
+attributes => employee number, name, qualification, date of birth, date of joining, department,designation, salary, address, pancard, mobileno,emailid
+functionality => set the data, update information, display information, calculate salary
+
+mapping/ representation
+entity => class
+attributes => member variables
+bahavior => methods
+
+mapping is done in 2 parts 
+strutural definition => class / UDD user defined datatype
+actual existance with data or member variables => object/instance
+
+class Employee => empNo,empName,salary, displayEmpInfo()
+employee1 => 101,"Smitha",76000
+employee2 => 103,"Rahav",80000
+
+class classname
+{
+	member variables;
+	methods
+}
+
+member variables => keywords datatype variablename;
+keyword for access modifier => public, package/default,protected,private
+datatype => primitive, non-primitive
+variablename => name using camel case
+
+methods => signature => keyword returntype methodname(parameterlist seperated by comma)
+keyword for access modifier => public, package/default,protected,private
+returntype => datatype
+		if method is not returning any value, it is represented with void as return type
+
+methodname => name to understand the purpose of method
+parameter list => list of values provided to the methods explicitly
+
+class Emp
+{
+	public int empNo;//instance variable
+	public String empName;//instance variable
+	public float salary;//instance variable
+	public void displayEmpInfo()//method
+	{
+		System.out.println("Employee Number : "+empNo);
+		System.out.println("Employee Name   : "+empName);
+		System.out.println("Salary          : "+salary);
+	}
+}
+
+
+declaration
+object/instance
+Emp e1; // declaration of reference variable e1 of type Emp
+e1=new Emp();
+initialization
+allocation of memory for all instance variables referred by e1 and initialization of instance variables of e1
+Emp e2=new Emp();
+
+use
+e1.empNo=101;
+e1.empName="Sagar";
+e1.salary=76000.0f;
+
+methods
+method definition
+method call
+e1.displayEmpInfo();
+
+kewword returntype methodname(parameter list)
+with return with parameter
+float updateSalary(int amt)
+
+with return without parameter
+float updateSalary()
+
+without return with parameter
+void updateSalary(int amt)
+
+without return without parameter
+void updateSalary()
+
+
+answer problem_solve(question)
+
+void problem_solve(question)
+
+void problem_solve()
+
+status problem_solve()
+
+
+constructor
+is a special method of a class used for initialization of instance variables for current object at the time of object creation
+when the constructor is not written then java will use a constructor internally and initialize all the instance variabls with default value of respective datatype.
+we can write constructor to initialize instance variables with specified values.
+
+rules 
+name of constructor and class should be same
+there is no returntype specification given to constructor
+there are 2 types of constructor
+constructor without parameters => parameterless constructor
+constructor with parameters
+
+there can be multiple constructors with different parameters in a class
+
+constructor is called implicitly at the time of object creation to initialize instance variables.
+
+this keyword
+this keyword in constructor
+by convention the instance variable name and parameter name is generally same. the local variable gets precedence, thus assigning the value to itself and not to instance variable. in such situation to specify instance variable a keyword this is used which refers to invoking/calling/implicit object.
+in the methods also it is a good practice to use this keyword to specify instance variable.
+
+this keyword can be used to call constructor within another constructor. the call will be made based on parameterlist provided with this() or this(111,"kkk").
+it should be the first statement in the constructor.
+
+this keyword can be used to refer instance variable or call method within another method.
+
+
+
+
+
+
+		
+
+			
+
+
+
+
+
+
