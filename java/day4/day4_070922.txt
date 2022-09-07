@@ -1,0 +1,21 @@
+memory management
+
+pillars of OOPs
+** encapsulation
+	restricting access to sensitive data
+	prevent unauthorized access
+	no direct access to sensitive data outside the class
+	(restricted, authorized, indirect access to data outside the class)
+** access control using access modifiers
+public => members are accessible outside the class through object
+private => not directly accessible outside the class. accessible only through non-private methods of the class
+generally instance variables are declared with private access modifier. constructors and methods are declared with non-private access modifier to facilitate accessing private members outside the class
+package/default => whenever no access modifier is used it is default. these memebrs are accessible to other classes within the same package.
+protected => associated with inheritance
+encapsulation is also called as data hiding, as data in one class can be hidden from other classes.
+
+** abstraction
+to provide only necessary information i.e. the name, the purpose, the parameters and return specification of the method. internal working of the method is not disclosed.
+
+
+
