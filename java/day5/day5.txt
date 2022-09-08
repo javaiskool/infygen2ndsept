@@ -1,0 +1,30 @@
+String
+collection or sequence o characters
+in JAVA it is predefined class
+2 ways => String literal, String object
+
+**way 1
+String literal
+String msg="Welcome";
+
+string is searched in the string constant pool
+if it exists then a reference is created for it
+otherwise a string with given value is created in the pool
+
+String s1="hello";
+String s2="Welcome";
+
+Welcome   hello
+
+** way 2
+String str1=new String("tryal");
+string is searched in the string constant pool
+a new object of String is created.
+if the string does not exist in the pool then  it is created in the pool
+
+
+
+
+
+
+
