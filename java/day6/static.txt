@@ -1,0 +1,52 @@
+static keyword
+*** static variables
+A class contains properties of real life entity in terms of member variables.
+instance variables/non-static variables => property belongs to object. At the time of object creation each instance variable will have a copy maintained seperately for each object. 
+
+class variables/static variable => belong to class and contains those properties which are common and accessible to class as well as all the objects. 
+only one copy of static variables is created and maintained and shared by all the objects.i.e. an object is not needed for using static variables
+scope entire class and all the objects
+they are initialized at the time of class loading. at the execution time the class is loaded in internal memory. static variables get memory allocation only once at the time of class loading.
+for defining class variables static keyword is used.
+
+*** static block
+static variables can be initialized using a static block.static block is executed only once at the time of class loading. there can be multiple static blocks.
+
+*** static methods
+static method can access only static variables. static methods cannot access non-static/instance variables.
+non-static methods can access static variables.
+
+
+class design
+{
+	instance variables/non-static variables
+	class variables /static variables
+	constructors ( for initialization of instance variables)
+	static block (for initialization of static variables)
+	non-static methods
+	static methods
+}
+
+class Emp
+{
+	private static int companyId; //declaration
+	private static int companyId=1111; // declaration & initialization
+	
+	static 
+	{
+		Emp.companyId=1111;
+	}
+	// static block is executed only once at the time of class loading
+
+	public static int getCompanyId(){return companyId;}
+	public static void setCompanyId(int companyId){Emp.companyId=companyId;}
+	public void displayEmpINfo() // non-static method
+	{
+		S.o.p.(Emp.companyId);	
+	}
+
+
+int x; // declaration
+x=5; //initialization
+int x=5; //declaration and initialization
+S.o.p.(x);
