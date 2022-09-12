@@ -1,0 +1,89 @@
+* relationships between classes
+real life scenario we have to handle multiple classes that exists seperately/individually and are related to each other.
+it implements reusability 
+
+classes communicate with each other through their objects.
+
+3 types of relationship between the classes
+** agreegation - object reference variable  of one class is member variable of another class
+"has a" relationship
+
+order - food
+emp - gadget
+student - study_material
+library - books
+dept - emp
+
+
+** association
+Association
+in association the classes communicate through methods. i.e. for functionality of one class it can use object of another class
+
+"uses a" relationship
+  
+Drier uses a Car           
+ 
+2 different independent classes that are associated with each other. i.e. object of one class is used as parameter in method of another class. this associatioon can be bi-directional
+
+Driver - id, name
+Car - id, model
+
+** aggregation vs association
+order has food  aggregation
+bill uses order association
+
+
+** inheritance => one of the pillars of OOP
+"is type of" relationship
+parent - child relationship
+child class inherits non-private properties of parent class
+parent class => base class/ super class
+child class => derived class/ sub class
+In java inheriting properties from only one parent class is supported.
+all parts of parent class that are non-private properties including member varibles, constructors, methods of parent class are directly accessible in child class as if these are its own properties.
+
+* to implement inheritance betwwen classes extends keyword is used
+
+* non-private members are directly accessible in child class. private members are accessible through non-private methods of parent class
+
+* a child class can inherit properties of only one class 
+
+* parent class do not have access to child class
+
+* when an object of child class is created , by default, parameterless constructor of parent class is called followed by execution of child class constructor.
+	to call parameterized constructor of parent class 
+		use super keyword with appropriate parameters.
+		call to parameterized constructor of parent class should be the first statement in the child class constructor.
+
+* if static block is present in parent and/or child class then the sequence of execution at the time of child class object creation is
+	static block of parent class
+	static block of child class
+	constructor of parent class
+	constructor of child class
+
+ * convention
+according to OOP when inheritance is used, then object of parent class is very rarely used. properties and functionalities of parent class are used through object of child class.
+
+ 
+* types of inheritance
+# single P - C
+one super class one sub class
+Emp(eno,ename,sal) - Programmer (skill)
+
+# hierarchical 
+P - C1, P - C2 => P - C1,C2
+one superclass, 2 or more sub classes
+Emp(eno,ename,sal) - Programmer (skill), Tester (type)
+
+# multilevel 
+P-C-G
+one superclass one subclass , subclass - another subclass
+Emp(eno,ename,sal) - Programmer (skill)-TeamLead (teanSize)
+
+#multiple inheritance
+P1,P2 - C not supported in JAVA for classes
+
+
+
+
+
