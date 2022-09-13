@@ -1,0 +1,53 @@
+polymorphism 
+poly => multiple
+morph => forms
+
+2 ways
+static polymorphism=> binding of the object ref and method call is done at compile time.
+
+method overloading => in a single class there can be multile methods with same name and different parameter list i.e. (the parameter list should differ in no. of parameters or datatype of parameters or sequence of parameters);
+
+method overloading => static polymorphism, compile time binding, early binding
+
+returntype methodname(parameterlist) => method signature
+
+in a single class when a task can be performed in differnt multiple ways, it can be represented with common methodname and different parameterlist. these methods should have diffent parameter list i.e. number of parameters, datatype of parameters or sequence of parameters should be different. this is called as method overloading. method overloading is not recognized by difference in the return datatype specification
+
+method with a purpose , it performs a single task. if the method can be written with different parameters and different implementation but same purpose then it can be represented using polymorphism i.e. multiple methods with same name and different parameter list
+
+
+
+** static polymorphism => method overloading
+making payments in different ways
+payment by cash => note, denomination
+paymentByCash(note, denomination)
+payment by cheque => bankname,chequeno, date,amt
+paymentByCheque(bankname,chequeno, date,amt)
+payment by debit card => type, cardno,cvv no
+paymentByDebitCard(type, cardno,cvv no)
+payment by netbanking => bankname, ifsccode, accno,userid, pwd
+paymentByNetBanking(bankname, ifsccode, accno,userid, pwd)
+
+binding of references and methods takes place at compile time. so it is also called as compile time binding/static polymorphism/early binding
+
+constructor overloading is a special case of method overloading. in a class multiple constructors can be written with different paramerlist. 
+
+
+*****
+dynamic polymorphism => binding of the object ref var and method call is done at execution time.
+late binding/ runtime polymorphism
+ 
+metod overriding is applicable only in case of inheritance and the method signatre should match exactly. i.e. if a parent class and child class has a method with exactlly same signature then it is the case of method overriding.  
+
+**child class cannot have weaker access modifier of overridden method
+(private package protected public)
+
+**  static methods are not overridden
+
+** private methods are not overridden (as they are not accesible)
+
+** if returntype is not compatible then compilation error occurs
+
+** overriding is applicable only for methods 
+
+
