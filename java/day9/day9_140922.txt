@@ -1,0 +1,119 @@
+*** Object class
+Obejct class is implicit superclass of all the classes.
+Object class has many methods to provide funcionality in the class.
+the class that user designs implicitly inherits non-private properties of Object class. some important methods with basic implementation are provided in Object class. while designing the class the methods can be used as they are. Also different implementation can be provided by overriding these methods. remember to justify the use/purpose/meaning of the method while overriding.
+
+
+== operator
+to compare references of two objects 
+
+**equals method
+to compare the contents refereed by 2 objects
+its overriden in String class to compares contents for equality  
+can be overridden to compare members of two objects 
+public boolean equals(Object obj)
+
+**toString method
+returns text about the object => returns String with format Emp@code
+it can be overridden to represent the object in meaningful and useful manner
+public String toString()
+
+**hashCode method
+generate hash code i.e. 32 bit integer 
+if equals() methods returns true the hashcode generated for 2 obj will be same
+if hashcode generated for 2 obj is same it dose not imply that equals() will return true
+uses some formula to generate the integer
+public int hashCode()
+
+note
+Generally whenever equals method is overriden, on similar lines hashCode() method is also overriden to have synchronized results of comparison.
+ 
+
+#####################################################################
+
+** final keyword
+
+used to represent constant
+it can be used in 3 ways
+ 1=> final with variable 
+when a variable is declared as final then its value cannot be changed once initialized.
+final variables are to be initialized at the time of declaration or by defining constructor. final variables are not initialized in default constructor
+final accessmodifier datatype varname;
+
+2=> final with method
+when a method is declared as final it cannot be overriden.
+final accessmodifier returntype methodname(parameter list)
+constructor cannot be declared as final
+
+3=> final with class
+when a class is declared as final then it cannot be inherited
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+abstract keyword is used to implement abstraction
+
+abstract keyword can be used with methods and classes only.
+
+scenario
+if a class has some functionality that is not implemented or defined within the class but , it should have provision of the design which should be implemented by all the child classes
+
+example Emp {   abstract public void calculateSalary(--); }
+	Programmer extends Emp {public void calculateSalary(--) { }}
+	Stester extends Emp{public void calculateSalary(--){} }
+
+
+abstract method 
+enforces overriding
+cannot be static or final or private
+abstract method should not have definition not even blank defrinition. it has only signature.
+accessmodifier abstract returntype methodname(parameterlist);
+public abstract void calculateSalary();
+
+when a method is declared as abstract the class becomes incomplete and can not be instanciated. so to notify incompleteness the class also has to be declared as abstract. 
+object cannot be created for abstract class, reference can be used.
+
+
+abstract class
+enforces inheritance
+all the subclasses has to provide implementation/definition of all the abstract methods from the parent class. 
+if not then that child class aslo becomes imcomplete i.e. abstract
+
+abstract class classname{   }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+interface
+interface is a complete designer class
+to define interface keyword interface is used
+all the methods are public and abstract
+all the data members(memeber variables) are public, static and final
+cannot be instantiated
+the design is used through inheritance
+it provides generic template to be implemented by many classes.
+
+the class that inherits interface has to provide definition of all the methods i.e. override all the methods from the interface, otherwise that class becomes abstract.
+
+the keyword implements is used to inherit interface
+Java supports inheriting multiple interfaces
+
+
+class
+a class can inherit only one class
+=> class A extends B
+a class can inherit multiple interfaces
+=> class A implements inf1,inf2
+a class can inherit one class and one or more interfaces
+=> class A extends B implements inf1,inf2
+
+
+interface
+an interface can inherit one or more interface
+interface inf1 extends inf2,inf3
+
+
+
+
+
+
+
+
