@@ -1,0 +1,138 @@
+packages
+to group related classes and interfaces
+to resolve name conflict i.e. to allow classes or interfaces with same names across the packages.
+
+to include a class or an interface in a package following statement is used
+
+package packagename;
+
+rules
+- package should be the first statement in the file.
+- to access a class or an interface from other packages the import statement is used
+ 3 ways
+
+- to access  all the classes and interfaces from the imported package use
+import packagename;
+import java.util.*;
+
+- to access a particular class or interface from the imported package
+import packagename.classname;
+import java.util.Scanner;
+
+- to access using full pathname. 
+java.util.Scanner = new java.util.Scanner(System.in);
+
+
+accessibility
+
+private members
+directly - within a class
+indirectly through non-private methods using an object- outside the class 
+
+protected members
+directly - within a class, subclass 
+within a package 
+indirectly - 
+
+default/package
+accessible within the package
+
+public - accessible to all the classes across packages
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+exception handling
+errors
+compilation errors - syntax, rule based => ; string system ()
+
+
+
+logical errors - not getting output as expected => rectification using debugging, dry run
+
+runtime errors - rules based => 
+system errors => memory error, system error => cannot be handled
+
+exceptions => errors related to user input/data access/ resource handling at execution time. 
+the developer has to make provision to check and handle there errors. these are called as exceptions.
+- some times the behavior of the program is unpredictable as it is communicating with outside resources.
+- when such exceptions occurs, the program execution terminates. the error messages are not clearly understandable, not user friendly.
+
+by handling exceptions a mechanism can be provided to generate more user friendly messages and the program execution may continue further.
+
+exceptions are handled usinf exception handling classes
+predefined 
+Throwable => class is superclass of all errors and exceptions
+Exception is superclass of all exception classes
+checked exceptions => whether are not the exceptions handling mechanism used is checked at compile time. it is manatory to handle some exceptions. 
+examples IOException, SQLException
+
+unchecked exceptions - these are not checked at compile time
+ArithmeticException, NullPOinterException, ArrayIndexOutofBoundsException
+
+keywords
+try - catch
+finally
+throw
+throws
+
+
+try-catch
+try
+{
+	statements that may generate exception
+
+}
+catch(Exceptionclassname object)
+{
+
+}
+	
+if any of the statements in the try block generated exception, 
+-then it is thrown ooutof the try block 
+- remaining statements in try block are not executed.
+- if compatible catch is found then that catch block is executed and the program execution continues after catch
+- if compatible catch is not found then the program terminates
+- a try block should be immediately followed by at least one catch block or a finally block
+- if multiple catch blocks are provided and Exception catch is used then it should be the last catch.
+-a try - catch block may optionally followed by a finally block which is executed whether or not an exception occurs.
+- finally block is generally used for releasing resources. it performs some imp. closing related tasks 
+
+nesteed try=catch blocks can be written in which,  if compatible catch is not found in inner try-catch then the exception is rethrown out of outer try block and compatible catch is searched in outer catch block.
+
+throw
+used to handle user specified exceptionsl situation
+an instance of appropriate exception class is created and thrown out of try block.
+throw new Excaptionclassname("message");
+
+throws
+used to declare an exception.
+it specifies that an exception may occur in the method
+it is always used with method signature
+the method call should be enclosed in try-catch or the method that is calling it should use throws clause
+generally used for checked exceptions
+
+
+public void updateValue() throws exception
+
+
+public void check()
+{
+	try{	
+	updateValue();
+	}
+	catch(){}
+}
+
+public void check() throws exception
+{
+	updateValue();
+}
+
+
+
+
+ 
+
+
+
+
+
